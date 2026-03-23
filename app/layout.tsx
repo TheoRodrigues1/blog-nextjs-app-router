@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.vercel.app"),
+  metadataBase: new URL("https://blog-nextjs-app-router.vercel.app"),
   title: {
     default: "Revista de Ideias | Blog com Next.js App Router",
     template: "%s | Revista de Ideias",
