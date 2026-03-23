@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "arquitetura-de-conteudo-no-app-router",
+    "title": "Arquitetura de Conteudo no App Router",
+    "description": "Como estruturar um blog com rotas dinamicas, componentes de servidor e renderizacao estatica no Next.js.",
+    "author": "Theo Silva",
+    "publishedAt": "2026-03-10",
+    "content": [
+      "Um blog no App Router funciona melhor quando a modelagem de conteudo e pensada junto com a estrategia de renderizacao. Isso significa escolher o que deve ser estatico, o que precisa ser recalculado e quais metadados acompanham cada pagina.",
+      "Neste exemplo, a listagem de artigos e as paginas individuais sao renderizadas no servidor usando funcoes async diretamente nas paginas. Isso reduz a complexidade no cliente e melhora a consistencia dos dados para SEO.",
+      "A combinacao entre generateStaticParams e generateMetadata permite transformar um simples JSON local em um site com rotas reais, indexaveis e com contexto proprio para cada artigo."
+    ]
+  },
+  {
+    "slug": "seo-dinamico-para-artigos",
+    "title": "SEO Dinamico para Artigos",
+    "description": "Boas praticas de metadados por rota usando generateMetadata e estrutura semantica no App Router.",
+    "author": "Theo Silva",
+    "publishedAt": "2026-03-16",
+    "content": [
+      "SEO em projetos com App Router nao depende apenas de um title global. Cada pagina precisa carregar um contexto proprio, com descricao coerente, titulo especifico e conteudo semanticamente bem distribuido.",
+      "Quando os metadados sao gerados a partir do slug do artigo, voce evita duplicidade de title e melhora a qualidade do snippet apresentado pelos motores de busca.",
+      "Mesmo com dados locais, a abordagem continua escalavel: basta trocar a fonte de dados por uma API sem alterar a estrategia geral da aplicacao."
+    ]
+  },
+  {
+    "slug": "ssg-com-json-local",
+    "title": "SSG com JSON Local",
+    "description": "Uma abordagem simples para gerar paginas estaticas a partir de dados locais e preparar o deploy na Vercel.",
+    "author": "Marina Costa",
+    "publishedAt": "2026-03-20",
+    "content": [
+      "Para prototipos, demos e pequenos portais editoriais, manter o conteudo em JSON local pode ser suficiente. O importante e organizar esse dado em um formato previsivel e com campos adequados para renderizacao e SEO.",
+      "Com generateStaticParams, o Next.js conhece todos os slugs antes do build e gera uma pagina para cada artigo. Isso reduz latencia e simplifica o deploy.",
+      "Se depois houver necessidade de migrar para uma API externa, o helper de acesso aos dados pode ser adaptado sem alterar o contrato das paginas."
+    ]
+  }
+]
